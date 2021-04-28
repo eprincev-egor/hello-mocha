@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
-  "types": "lib/index.ts",
+  "types": "src/index.ts",
   "scripts": {
     "build": "tsc",
     "test": "nyc -source-map --produce-source-map --reporter=html --reporter=text-summary mocha",
-    "eslint": "eslint --ext .js,.ts lib",
-    "eslint-fix": "eslint --fix --ext .js,.ts lib",
+    "eslint": "eslint --ext .js,.ts src",
+    "eslint-fix": "eslint --fix --ext .js,.ts src",
     "postinstall": "node postinstall/postinstall.js"
   },
   "nyc": {
@@ -28,7 +28,7 @@
       "coverage",
       "postinstall/postinstall.js",
       ".mocharc.js",
-      "lib/index.ts"
+      "src/index.ts"
     ]
   },
   "keywords": [],
