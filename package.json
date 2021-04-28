@@ -1,12 +1,13 @@
 {
-  "name": "",
+  "name": "hello_mocha",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "src/index.ts",
   "scripts": {
     "build": "tsc",
-    "test": "nyc -source-map --produce-source-map --reporter=html --reporter=text-summary mocha",
+    "test": "mocha",
+    "coverage": "nyc mocha",
     "eslint": "eslint --ext .js,.ts src",
     "eslint-fix": "eslint --fix --ext .js,.ts src",
     "postinstall": "node postinstall/postinstall.js"
@@ -16,7 +17,8 @@
       ".ts"
     ],
     "reporter": [
-      "html"
+      "html",
+      "text-summary"
     ],
     "require": [
       "source-map-support/register",
