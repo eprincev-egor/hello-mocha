@@ -100,25 +100,28 @@
             {"allowSingleExtends": false}
         ],
         "@typescript-eslint/no-extra-parens": ["off"],
-        "@typescript-eslint/no-magic-numbers": [
-            "error",
-            {
-                "ignore": [0, -1, 1],
-                "ignoreArrayIndexes": true,
-                "ignoreDefaultValues": true,
-                "ignoreReadonlyClassProperties": true,
-                "ignoreEnums": true,
-                "ignoreNumericLiteralTypes": true
-            }
-        ],
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-magic-numbers": "off",
+        "unicorn/prefer-ternary": "off",
+        "unicorn/no-array-push-push": "off"
     },
     "overrides": [
         {
-            "files": ["*.spec.ts"],
+            "files": [
+                "*.spec.ts",
+                "**/fixture.ts",
+                "**/fixture/*.ts"
+            ],
             "rules": {
+                "@typescript-eslint/no-non-null-assertion": "off",
                 "@typescript-eslint/no-magic-numbers": "off",
-                "max-classes-per-file": "off"
+                "max-classes-per-file": "off",
+                "sonarjs/cognitive-complexity": "off",
+                "sonarjs/no-identical-functions": "off",
+                "@typescript-eslint/no-unsafe-member-access": "off",
+                "class-methods-use-this": "off",
+                "sonarjs/no-duplicate-string": "off",
+                "unicorn/consistent-function-scoping": "off"
             }
         },
         {
